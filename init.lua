@@ -141,6 +141,17 @@ vim.o.timeoutlen = 300
 vim.o.splitright = true
 vim.o.splitbelow = true
 
+-- Indentation Settings
+vim.opt.tabstop = 4 -- Number of spaces that a <Tab> counts for
+vim.opt.shiftwidth = 4 -- Number of spaces to use for each indentation level
+vim.opt.expandtab = true -- Use spaces instead of tabs
+vim.opt.smartindent = true -- Auto-indent new lines
+
+-- Enable filetype-specific settings
+vim.cmd [[
+  autocmd FileType javascript,typescript,html,css,json setlocal shiftwidth=2 tabstop=2
+]]
+
 -- Sets how neovim will display certain whitespace characters in the editor.
 --  See `:help 'list'`
 --  and `:help 'listchars'`
